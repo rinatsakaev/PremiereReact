@@ -14,7 +14,7 @@ export default function Film({onAdd, filmId, name}) {
             body: JSON.stringify({Film: {Id: filmId}, StartTime: sessionDate})
         })
             .then(fetchSessions)
-            .catch(e => console.log(e));
+            .catch(e => console.log("Create session error", e));
     };
 
     const onSessionDateChanged = (e) => {
@@ -22,14 +22,16 @@ export default function Film({onAdd, filmId, name}) {
     };
 
     const onSessionDeleted = (sessionId) => {
-
+        fetch(`/api/session/delete/${sessionId}`)
+            .then(fetchSessions)
+            .catch(e => console.log("Delete session error", e))
     };
 
     const fetchSessions = () => {
         fetch(`/api/session/getByFilmId/${filmId}`)
             .then(x => x.json())
             .then(x => setExistingSessions(x))
-            .catch(e => console.log(e));
+            .catch(e => console.log("Fetch sessions error", e));
     };
 
     useEffect(() => {
@@ -39,7 +41,7 @@ export default function Film({onAdd, filmId, name}) {
     const sessionsComponents = existingSessions.map(x =>
         <li><Session sessionId={x.Id}
                      startTime={x.StartTime}
-                     onDelete={() => onSessionDateChanged(x.Id)}/>
+                     onDelete={() => onSessionDeleted(x.Id)}/>
         </li>);
     return (
         <div className={'film-container'}>

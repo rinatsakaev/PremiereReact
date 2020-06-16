@@ -15,14 +15,14 @@ export default class Home extends React.Component {
         fetch('/api/film/get')
             .then(x => x.json())
             .then(x => this.setState({films: x}))
-            .catch(x => alert(x));
+            .catch(x => console.log("Get films error", x));
     }
 
     updateSessionList() {
         fetch('/api/session/get')
             .then(x => x.json())
             .then(x => this.setState({sessions: x}))
-            .catch(x => alert(x));
+            .catch(x => console.log("update session list error", x));
     }
 
     render() {

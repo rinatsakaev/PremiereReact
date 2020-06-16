@@ -2,6 +2,7 @@
 using CommonModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Newtonsoft.Json;
 using PremiereServer;
 
@@ -34,6 +35,17 @@ namespace PremiereReact.Api
             return JsonConvert.SerializeObject(_db.Sessions
                 .Include(x => x.Film)
                 .Where(x => x.Film.Id == filmId).ToList());
+        }
+
+        [HttpGet("delete/{sessionId}")]
+        public IActionResult Delete(int sessionId)
+        {
+            var session = _db.Sessions.FirstOrDefault(x => x.Id == sessionId);
+            if (session == null)
+                return NotFound();
+            _db.Sessions.Remove(session);
+            _db.SaveChanges();
+            return Ok();
         }
 
         [HttpPost("create")]
