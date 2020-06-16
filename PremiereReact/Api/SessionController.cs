@@ -30,13 +30,13 @@ namespace PremiereReact.Api
         }
 
         [HttpPost("create")]
-        public void Create(int filmId, DateTime dateTime)
+        public void Create([FromBody] Session session1)
         {
-            var film = _db.Films.FirstOrDefault(x => x.Id == filmId);
+            var film = _db.Films.FirstOrDefault(x => x.Id == session1.Film.Id);
             if (film == null)
                 NotFound(404);
-            var session = new Session{Film = film, StartTime = dateTime};
-            _db.Sessions.AddAsync(session);
+            film.Sessions.Add(new Session { Film = film, StartTime = session1.StartTime }); _db.SaveChanges();
+            _db.SaveChanges();
             Ok(200);
         }
     }

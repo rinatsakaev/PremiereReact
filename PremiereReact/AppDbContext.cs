@@ -24,13 +24,13 @@ namespace PremiereServer
                 new Film { Id = 2, Name = "Приключения Электроника" },
                 new Film { Id = 3, Name = "Кавказская пленница" }
             );
-            builder.Entity<Session>().HasData(
-                new Session { Id = 1, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 22, 35, 0) },
-                new Session { Id = 2, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 19, 20, 0) },
-                new Session { Id = 3, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 17, 0, 0) },
-                new Session { Id = 4, FilmId = 2, StartTime = new DateTime(2020, 6, 17, 19, 20, 0) },
-                new Session { Id = 5, FilmId = 2, StartTime = new DateTime(2020, 6, 18, 19, 20, 0) }
-                );
+            //builder.Entity<Session>().HasData(
+            //    new Session { Id = 1, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 22, 35, 0) },
+            //    new Session { Id = 2, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 19, 20, 0) },
+            //    new Session { Id = 3, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 17, 0, 0) },
+            //    new Session { Id = 4, FilmId = 2, StartTime = new DateTime(2020, 6, 17, 19, 20, 0) },
+            //    new Session { Id = 5, FilmId = 2, StartTime = new DateTime(2020, 6, 18, 19, 20, 0) }
+            //    );
         }
     }
 }

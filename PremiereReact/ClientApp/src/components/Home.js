@@ -22,12 +22,14 @@ export default class Home extends React.Component {
 
     render() {
         const sessions = this.state.sessions.map(x => <div>
-            <p>Название фильма: {x.Name}</p>
+            <p>Название фильма: {x.Film.Name}</p>
             <p>Время начала: {x.StartTime}</p>
         </div>);
-        const filmComponents = this.state.films.map(x => <Film props={x}/>);
+        const filmComponents = this.state.films.map(x => <Film data={x}/>);
         return <React.Fragment>
+            <div>
             {filmComponents}
+            </div>
         
             {sessions.length?sessions:<p>No sessions</p>}
         </React.Fragment>
