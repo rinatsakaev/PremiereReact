@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using PremiereServer;
 using PremiereServer.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace PremiereServer.Api
+namespace PremiereReact.Api
 {
-    [Route("api/[controller]")]
+    [Route("api/session")]
     public class SessionController : Controller
     {
         private readonly AppDbContext _db;
@@ -20,7 +19,7 @@ namespace PremiereServer.Api
             _db = db;
         }
         // GET: api/<controller>
-        [HttpGet]
+        [HttpGet("get")]
         public string Get()
         {
             return JsonConvert.SerializeObject(
@@ -30,7 +29,7 @@ namespace PremiereServer.Api
             );
         }
 
-        [HttpPost]
+        [HttpPost("create")]
         public void Create(int filmId, DateTime dateTime)
         {
             var film = _db.Films.FirstOrDefault(x => x.Id == filmId);
