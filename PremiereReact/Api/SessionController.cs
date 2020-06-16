@@ -10,7 +10,7 @@ using PremiereServer;
 
 namespace PremiereReact.Api
 {
-    [Route("api/session")]
+    [Route("api/[controller]")]
     public class SessionController : Controller
     {
         private readonly AppDbContext _db;
