@@ -113,3 +113,5 @@ C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\System.Xml.XPat
 C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\CommonModels.dll
 C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\CommonModels.pdb
 C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.csproj.CopyComplete
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\Newtonsoft.Json.xml
