@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Layout } from './components/Layout';
-import Home from './components/Home';
+import Home from './pages/home';
 import {Route} from 'react-router-dom';
-import Page1 from './components/Page1';
-import Page2 from './components/Page2';
+import Page1 from './pages/page-1';
+import Page2 from './pages/page-2';
 export default class App extends Component {
     render() {
         return (

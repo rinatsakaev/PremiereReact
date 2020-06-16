@@ -28,6 +28,14 @@ namespace PremiereReact.Api
             );
         }
 
+        [HttpGet("getByFilmId/{filmId}")]
+        public string GetByFilmId(int filmId)
+        {
+            return JsonConvert.SerializeObject(_db.Sessions
+                .Include(x => x.Film)
+                .Where(x => x.Film.Id == filmId).ToList());
+        }
+
         [HttpPost("create")]
         public IActionResult Create([FromBody] Session session)
         {

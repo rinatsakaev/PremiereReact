@@ -24,17 +24,19 @@ namespace PremiereWpf1
     public partial class MainWindow : Window
     {
         private readonly HttpClient httpClient;
-        private static string baseUrl = "http://localhost/api/";
         public MainWindow()
         {
             InitializeComponent();
-            httpClient = new HttpClient();
-            RenderSessions();
+            httpClient = new HttpClient
+            {
+                BaseAddress = new Uri("https://localhost:44375/")
+            };
+            RenderSessions().GetAwaiter().GetResult();
         }
 
-        private void RenderSessions()
+        private async Task RenderSessions()
         {
-            var sessions = FetchSessions().Result;
+            var sessions = await FetchSessions();
             foreach (var session in sessions)
             {
                 LayoutGrid.RowDefinitions.Add(new RowDefinition());
@@ -47,7 +49,7 @@ namespace PremiereWpf1
         }
         private async Task<List<Session>> FetchSessions()
         {
-            var response = await httpClient.GetAsync(baseUrl + "/session/get");
+            var response = httpClient.GetAsync("api/session/get").Result;
             if (response.IsSuccessStatusCode)
             {
                 var rawAnser = await response.Content.ReadAsStringAsync();
