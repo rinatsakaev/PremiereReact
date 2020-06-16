@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PremiereServer.Models;
+using System;
 
 namespace PremiereServer
 {
@@ -18,6 +15,22 @@ namespace PremiereServer
             var connectionString =
                 "Host=rogue.db.elephantsql.com;Database=qhlpwazs;Username=qhlpwazs;Password=F6ORA3IRNsf3LDmkDc-Zopmrd39PjxOq";
             optionsBuilder.UseNpgsql(connectionString, options => options.SetPostgresVersion(new Version(9, 6)));
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Film>().HasData(
+                new Film { Id = 1, Name = "Иван Васильевич меняет профессию" },
+                new Film { Id = 2, Name = "Приключения Электроника" },
+                new Film { Id = 3, Name = "Кавказская пленница" }
+            );
+            builder.Entity<Session>().HasData(
+                new Session { Id = 1, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 22, 35, 0) },
+                new Session { Id = 2, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 19, 20, 0) },
+                new Session { Id = 3, FilmId = 1, StartTime = new DateTime(2020, 6, 16, 17, 0, 0) },
+                new Session { Id = 4, FilmId = 2, StartTime = new DateTime(2020, 6, 17, 19, 20, 0) },
+                new Session { Id = 5, FilmId = 2, StartTime = new DateTime(2020, 6, 18, 19, 20, 0) }
+                );
         }
     }
 }

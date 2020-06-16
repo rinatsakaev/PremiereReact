@@ -12,14 +12,12 @@ export default class Home extends React.Component {
     componentDidMount() {
         fetch('/api/session/get')
             .then(x => x.json())
-            .then(x => this.updateSessionsAndFilms(x))
+            .then(x =>  this.setState({sessions: x}))
             .catch(x => alert(x));
-    }
-
-    updateSessionsAndFilms(data){
-        this.setState({sessions: data});
-        const films = data.map(x => x.Film);
-        this.setState({films: films});
+        fetch('/api/film/get')
+            .then(x => x.json())
+            .then(x => this.setState({films: x}))
+            .catch(x => alert(x));
     }
 
     render() {
