@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PremiereServer.Models;
 using System;
+using PremiereReact.Models;
 
 namespace PremiereServer
 {
@@ -9,6 +10,8 @@ namespace PremiereServer
         public DbSet<Film> Films { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Session> Sessions { get; set; }
+        public DbSet<Like> Likes { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
