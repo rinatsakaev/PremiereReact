@@ -1,0 +1,15 @@
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.csprojAssemblyReference.cache
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\MainWindow.g.cs
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\App.g.cs
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1_MarkupCompile.cache
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1_MarkupCompile.lref
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\PremiereWpf1.exe.config
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\PremiereWpf1.exe
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\bin\Debug\PremiereWpf1.pdb
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\MainWindow.baml
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.g.resources
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.Properties.Resources.resources
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.csproj.GenerateResource.cache
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.csproj.CoreCompileInputs.cache
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.exe
+C:\Users\rinat\source\repos\PremiereReact\PremiereWpf1\obj\Debug\PremiereWpf1.pdb
