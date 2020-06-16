@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using CommonModels.Models;
+using CommonModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;

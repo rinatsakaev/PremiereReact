@@ -1,0 +1,5 @@
+C:\Users\rinat\source\repos\PremiereReact\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.deps.json
+C:\Users\rinat\source\repos\PremiereReact\ClassLibrary2\bin\Debug\netstandard2.0\ClassLibrary2.dll
+C:\Users\rinat\source\repos\PremiereReact\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\rinat\source\repos\PremiereReact\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.AssemblyInfoInputs.cache
+C:\Users\rinat\source\repos\PremiereReact\ClassLibrary2\obj\Debug\netstandard2.0\ClassLibrary2.AssemblyInfo.cs

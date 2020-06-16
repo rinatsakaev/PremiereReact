@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using CommonModels.Models;
+using CommonModels;
 using PremiereReact.Models;
 
 namespace PremiereServer
