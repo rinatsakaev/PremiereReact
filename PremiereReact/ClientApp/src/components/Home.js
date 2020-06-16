@@ -10,13 +10,17 @@ export default class Home extends React.Component {
         }
     }
     componentDidMount() {
-        fetch('/api/session/get')
-            .then(x => x.json())
-            .then(x =>  this.setState({sessions: x}))
-            .catch(x => alert(x));
+        this.updateSessionList();
         fetch('/api/film/get')
             .then(x => x.json())
             .then(x => this.setState({films: x}))
+            .catch(x => alert(x));
+    }
+
+    updateSessionList(){
+        fetch('/api/session/get')
+            .then(x => x.json())
+            .then(x =>  this.setState({sessions: x}))
             .catch(x => alert(x));
     }
 
@@ -25,12 +29,11 @@ export default class Home extends React.Component {
             <p>Название фильма: {x.Film.Name}</p>
             <p>Время начала: {x.StartTime}</p>
         </div>);
-        const filmComponents = this.state.films.map(x => <Film data={x}/>);
+        const filmComponents = this.state.films.map(x => <Film data={x} onAdd={() => this.updateSessionList()}/>);
         return <React.Fragment>
             <div>
             {filmComponents}
             </div>
-        
             {sessions.length?sessions:<p>No sessions</p>}
         </React.Fragment>
     }

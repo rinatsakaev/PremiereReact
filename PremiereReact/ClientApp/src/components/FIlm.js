@@ -6,14 +6,18 @@ export default class Film extends React.Component {
         this.inputRef = React.createRef();
     }
 
-    createSession(){
+    createSession() {
         fetch('/api/session/create', {
             method: 'POST',
-            headers:{
+            headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify({FilmId: this.props.data.Id, StartTime: this.inputRef.current.value} )
-        }).then(r => console.log(r));
+            body: JSON.stringify({Film: {Id: this.props.data.Id}, StartTime: this.inputRef.current.value})
+        }).catch((e) => alert(e))
+            .then(() => {
+                this.props.onAdd();
+                this.inputRef.current.value = undefined;
+            });
     }
 
     render() {
