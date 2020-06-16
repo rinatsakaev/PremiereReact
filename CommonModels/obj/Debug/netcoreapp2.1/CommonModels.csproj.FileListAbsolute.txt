@@ -1,0 +1,9 @@
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\bin\Debug\netcoreapp2.1\CommonModels.deps.json
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\bin\Debug\netcoreapp2.1\CommonModels.dll
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\obj\Debug\netcoreapp2.1\CommonModels.csproj.CoreCompileInputs.cache
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\obj\Debug\netcoreapp2.1\CommonModels.AssemblyInfoInputs.cache
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\obj\Debug\netcoreapp2.1\CommonModels.AssemblyInfo.cs
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\bin\Debug\netcoreapp2.1\CommonModels.pdb
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\obj\Debug\netcoreapp2.1\CommonModels.csprojAssemblyReference.cache
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\obj\Debug\netcoreapp2.1\CommonModels.dll
+C:\Users\rinat\source\repos\PremiereReact\CommonModels\obj\Debug\netcoreapp2.1\CommonModels.pdb

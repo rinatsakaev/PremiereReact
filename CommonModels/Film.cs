@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
-using Remotion.Linq.Parsing.ExpressionVisitors.MemberBindings;
 
-namespace PremiereServer.Models
+namespace CommonModels.Models
 {
     public class Film
     {
