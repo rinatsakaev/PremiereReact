@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PremiereWpf1"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:commonModels="clr-namespace:CommonModels;assembly=CommonModels"
         mc:Ignorable="d"
         Title="SessionsWindow" Height="450" Width="800">
     <Grid>
         <ListView x:Name="SessionsView">
             <ListView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate DataType="commonModels:Session">
                     <StackPanel>
                         <TextBlock Text="{Binding StartTime}"/>
-                        <xctk:IntegerUpDown Name="myUpDownControl" Minimum="0"/>
-                        <Button>Сохранить</Button>
+                        <xctk:IntegerUpDown Name="Quantity" Minimum="0"/>
+                        <Button Click="OnClick">Сохранить</Button>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

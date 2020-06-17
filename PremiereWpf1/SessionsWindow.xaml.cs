@@ -29,5 +29,11 @@ namespace PremiereWpf1
             SessionsView.ItemsSource = sessions
                 .Where(x => x.Film.Id == film.Id).ToList();
         }
+
+        public void OnClick(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            return;
+        }
     }
 }
