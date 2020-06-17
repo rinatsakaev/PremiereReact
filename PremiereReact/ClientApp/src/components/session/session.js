@@ -5,10 +5,9 @@ export default function Session({startTime, onDelete}) {
     const days = date.getDate().toString().padStart(2, "0");
     const months = (date.getMonth()+1).toString().padStart(2, "0");
     return (
-        <div>
-            <p>Время начала</p>
-            <p>{`${days}.${months} ${date.getHours()}:${date.getMinutes()}`}</p>
-            <button onClick={() => onDelete()}>Удалить</button>
-        </div>
+        <li className={"session__item"}>
+            <p className={"session__start-time"}>{`${days}.${months} ${date.getHours()}:${date.getMinutes()}`}</p>
+            <button className={"session__remove"} onClick={() => onDelete()}>Удалить</button>
+        </li>
     )
 }

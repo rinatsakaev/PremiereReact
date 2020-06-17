@@ -1,0 +1,6 @@
+.session__item{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}

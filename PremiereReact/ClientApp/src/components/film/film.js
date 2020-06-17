@@ -39,15 +39,14 @@ export default function Film({onAdd, filmId, name}) {
     }, []);
 
     const sessionsComponents = existingSessions.map(x =>
-        <li><Session sessionId={x.Id}
+        <Session sessionId={x.Id}
                      startTime={x.StartTime}
                      onDelete={() => onSessionDeleted(x.Id)}/>
-        </li>);
+        );
     return (
         <div className={'film-container'}>
             <div className={'film'}>
-                <p className={'film__title'}> {name}
-                </p>
+                <h1 className={'film__title'}>{name}</h1>
                 <input className={'film__input'} type={'datetime-local'} onChange={(e) => onSessionDateChanged(e)}/>
                 <button className={'film__button'} onClick={() => createSession()}>Создать сеанс</button>
             </div>

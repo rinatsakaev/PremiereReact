@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:PremiereWpf1"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:commonModels="clr-namespace:CommonModels;assembly=CommonModels"
+        xmlns:models="clr-namespace:CommonModels.Models;assembly=CommonModels"
         mc:Ignorable="d"
         Title="SessionsWindow" Height="450" Width="800">
     <Grid>
         <ListView x:Name="SessionsView">
             <ListView.ItemTemplate>
-                <DataTemplate DataType="commonModels:Session">
+                <DataTemplate DataType="models:Session">
                     <StackPanel>
                         <TextBlock Text="{Binding StartTime}"/>
                         <xctk:IntegerUpDown Name="Quantity" Minimum="0" Text="{Binding ElementName = myTextBox, Path=Text}"/>

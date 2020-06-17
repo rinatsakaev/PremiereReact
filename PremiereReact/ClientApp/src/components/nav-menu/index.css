@@ -1,1 +1,11 @@
-﻿
+﻿.header{
+    display: flex;
+    justify-content: center;
+    margin: 0 25px;
+}
+.header__link{
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+}

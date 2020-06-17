@@ -7,21 +7,15 @@ import './index.css';
 export class NavMenu extends Component {
   render() {
     return (
-      <div>
+      <div className={"header"}>
             <LinkContainer to={'/'} exact>
-              <NavItem>
-                <Glyphicon glyph='home' /> Home
-              </NavItem>
+              <a className={"header__link"}>Home</a>
             </LinkContainer>
             <LinkContainer to={'/page1'}>
-              <NavItem>
-                <Glyphicon glyph='home' /> Page 1
-              </NavItem>
+              <a className={"header__link"}>Page 1</a>
             </LinkContainer>
             <LinkContainer to={'/page2'}>
-              <NavItem>
-                <Glyphicon glyph='home' /> Page 2
-              </NavItem>
+                <a className={"header__link"}>Page 2</a>
             </LinkContainer>
       </div>
     );
