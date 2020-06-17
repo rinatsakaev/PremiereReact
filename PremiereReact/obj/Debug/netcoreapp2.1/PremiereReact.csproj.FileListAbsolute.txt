@@ -8,17 +8,10 @@ C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.RazorAssemblyInfo.cs
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.AssemblyInfoInputs.cache
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.AssemblyInfo.cs
-C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.TagHelpers.input.cache
-C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.TagHelpers.output.cache
-C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.RazorCoreGenerate.cache
-C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\Razor\Pages\Error.g.cshtml.cs
-C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\Razor\Pages\_ViewImports.g.cshtml.cs
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.RazorTargetAssemblyInfo.cache
-C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.RazorTargetAssemblyInfo.cs
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\bin\Debug\netcoreapp2.1\PremiereReact.pdb
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\bin\Debug\netcoreapp2.1\PremiereReact.Views.dll
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\bin\Debug\netcoreapp2.1\PremiereReact.Views.pdb
-C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.Views.pdb
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.dll
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.pdb
 C:\Users\rinat\source\repos\PremiereReact\PremiereReact\obj\Debug\netcoreapp2.1\PremiereReact.csproj.CopyComplete

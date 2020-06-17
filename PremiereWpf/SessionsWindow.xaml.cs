@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CommonModels;
+using CommonModels.Models;
 using Newtonsoft.Json;
 
 namespace PremiereWpf1

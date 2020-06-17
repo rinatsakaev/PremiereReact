@@ -4360,7 +4360,7 @@
       },
       "CommonModels/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
         },
@@ -11892,7 +11892,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "C:\\Users\\rinat\\source\\repos\\PremiereReact\\ClassLibrary2\\CommonModels.csproj",
       "CommonModels >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
@@ -11931,9 +11930,6 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\rinat\\source\\repos\\PremiereReact\\ClassLibrary2\\CommonModels.csproj": {
-              "projectPath": "C:\\Users\\rinat\\source\\repos\\PremiereReact\\ClassLibrary2\\CommonModels.csproj"
-            },
             "C:\\Users\\rinat\\source\\repos\\PremiereReact\\CommonModels\\CommonModels.csproj": {
               "projectPath": "C:\\Users\\rinat\\source\\repos\\PremiereReact\\CommonModels\\CommonModels.csproj"
             }
@@ -11981,16 +11977,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Не удалось найти проект \"C:\\Users\\rinat\\source\\repos\\PremiereReact\\ClassLibrary2\\CommonModels.csproj\". Убедитесь, что ссылка на проект действительна и файл проекта существует.",
-      "libraryId": "C:\\Users\\rinat\\source\\repos\\PremiereReact\\ClassLibrary2\\CommonModels.csproj",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }
