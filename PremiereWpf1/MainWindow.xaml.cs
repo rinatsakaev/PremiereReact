@@ -1,20 +1,13 @@
-﻿using System;
+﻿using CommonModels;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using CommonModels;
-using Newtonsoft.Json;
 
 namespace PremiereWpf1
 {
@@ -24,6 +17,7 @@ namespace PremiereWpf1
     public partial class MainWindow : Window
     {
         private readonly HttpClient httpClient;
+        private List<Session> sessions { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -31,31 +25,54 @@ namespace PremiereWpf1
             {
                 BaseAddress = new Uri("https://localhost:44375/")
             };
-            RenderSessions().GetAwaiter().GetResult();
+            FetchSessions().Wait();
+            RenderFilms();
         }
 
-        private async Task RenderSessions()
+        private void CreateGridRows(int quantity)
         {
-            var sessions = await FetchSessions();
-            foreach (var session in sessions)
-            {
+            for (var i = 0; i < quantity; i++)
                 LayoutGrid.RowDefinitions.Add(new RowDefinition());
+
+        }
+
+        private void HandleFilmClick(Object sender, MouseButtonEventArgs e, Film film)
+        {
+            var sessionWindow = new SessionsWindow(film, sessions);
+            sessionWindow.Show();
+        }
+
+        private void RenderFilms()
+        {
+            var films = sessions.Select(x => x.Film)
+                .GroupBy(x => x.Id)
+                .Select(x => x.First())
+                .ToList();
+            CreateGridRows(films.Count);
+            for (var i = 0; i < films.Count; i++)
+            {
                 var textBlock = new TextBlock
                 {
-                    Text = session.Film.Name
+                    Text = films[i].Name
                 };
+                var currentI = i;
+                textBlock.MouseLeftButtonUp += 
+                    (sender, e) =>
+                    HandleFilmClick(sender, e, films[currentI]);
+                Grid.SetColumn(textBlock, i % 3);
+                Grid.SetRow(textBlock, i / 3);
                 LayoutGrid.Children.Add(textBlock);
             }
         }
-        private async Task<List<Session>> FetchSessions()
+
+        private async Task FetchSessions()
         {
             var response = httpClient.GetAsync("api/session/get").Result;
             if (response.IsSuccessStatusCode)
             {
                 var rawAnser = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<List<Session>>(rawAnser);
+                sessions = JsonConvert.DeserializeObject<List<Session>>(rawAnser);
             }
-            return new List<Session>(0);
         }
     }
 }
