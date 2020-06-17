@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PremiereWpf.Properties
+namespace PremiereWpf1.Properties
 {
 
 
