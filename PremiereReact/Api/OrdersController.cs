@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using System.Threading.Tasks;
 using CommonModels;
 using CommonModels.Models;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,14 +20,15 @@ namespace PremiereServer.Api
         }
 
         // POST api/<controller>
-        [HttpPost]
-        public void Create(int sessionId, int quantity)
+        [HttpPost("create")]
+        public async Task Create([FromBody] Order order)
         {
-            var session = _db.Sessions.FirstOrDefault(x => x.Id == sessionId);
+            var session = await _db.Sessions.FirstOrDefaultAsync(x => x.Id == order.SessionId);
             if (session == null)
                 NotFound(404);
-            var order = new Order { Quantity = quantity, Session = session };
-            _db.Orders.AddAsync(order);
+            order.Session = session;
+            await _db.Orders.AddAsync(order);
+            await _db.SaveChangesAsync();
             Ok(200);
         }
     }

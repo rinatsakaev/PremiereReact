@@ -1,5 +1,7 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PremiereServer;
 
@@ -17,10 +19,10 @@ namespace PremiereReact.Api
         }
         // GET: api/<controller>
         [HttpGet("get")]
-        public string Get()
+        public async Task<string> Get()
         {
             return JsonConvert.SerializeObject(
-                _db.Films.ToList()
+                await _db.Films.ToListAsync()
             );
         }
     }

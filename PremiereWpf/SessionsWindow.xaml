@@ -15,7 +15,7 @@
                 <DataTemplate DataType="models:Session">
                     <StackPanel>
                         <TextBlock Text="{Binding StartTime}"/>
-                        <xctk:IntegerUpDown Name="Quantity" Minimum="0" Text="{Binding ElementName = myTextBox, Path=Text}"/>
+                        <xctk:IntegerUpDown Name="Quantity" Minimum="0"/>
                         <Button Click="OnClick">Сохранить</Button>
                     </StackPanel>
                 </DataTemplate>

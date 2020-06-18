@@ -2,6 +2,7 @@
 using PremiereReact.Models;
 using PremiereServer;
 using System;
+using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,15 +19,15 @@ namespace PremiereReact.Api
         }
 
         [HttpGet("create")]
-        public IActionResult Create(string pageSlug)
+        public async Task<IActionResult> Create(string pageSlug)
         {
-            _db.Likes.Add(
+            await _db.Likes.AddAsync(
                 new Like
                 {
                     PageSlug = pageSlug,
                     DateTime = DateTime.Now
                 });
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
             return Ok();
         }
     }

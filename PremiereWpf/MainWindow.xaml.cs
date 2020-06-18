@@ -1,4 +1,4 @@
-﻿using CommonModels;
+﻿using CommonModels.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using CommonModels.Models;
 
 namespace PremiereWpf1
 {
@@ -57,7 +56,7 @@ namespace PremiereWpf1
                     Text = films[i].Name
                 };
                 var currentI = i;
-                textBlock.MouseLeftButtonUp += 
+                textBlock.MouseLeftButtonUp +=
                     (sender, e) =>
                     HandleFilmClick(sender, e, films[currentI]);
                 Grid.SetColumn(textBlock, i % 3);
@@ -71,8 +70,10 @@ namespace PremiereWpf1
             var response = httpClient.GetAsync("api/session/get").Result;
             if (response.IsSuccessStatusCode)
             {
-                var rawAnser = await response.Content.ReadAsStringAsync();
-                sessions = JsonConvert.DeserializeObject<List<Session>>(rawAnser);
+                sessions = JsonConvert
+                    .DeserializeObject<List<Session>>(
+                        await response.Content.ReadAsStringAsync()
+                    );
             }
         }
     }
