@@ -1,12 +1,9 @@
-﻿using CommonModels.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using PremiereServer;
 using System.Linq;
 using System.Threading.Tasks;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using CommonModels;
 
 namespace PremiereReact.Api
 {
@@ -32,9 +29,11 @@ namespace PremiereReact.Api
         [HttpGet("getByFilmId/{filmId}")]
         public async Task<string> GetByFilmId(int filmId)
         {
-            return JsonConvert.SerializeObject(await _db.Sessions
+            return JsonConvert.SerializeObject(
+                await _db.Sessions
                 .Include(x => x.Film)
-                .Where(x => x.Film.Id == filmId).ToListAsync());
+                .Where(x => x.Film.Id == filmId).ToListAsync()
+                );
         }
 
         [HttpGet("delete/{sessionId}")]

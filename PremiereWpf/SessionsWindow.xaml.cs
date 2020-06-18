@@ -26,7 +26,7 @@ namespace PremiereWpf1
     public partial class SessionsWindow : Window
     {
         private readonly HttpClient httpClient;
-        public SessionsWindow(Film film, List<Session> sessions)
+        public SessionsWindow(Film film, IEnumerable<Session> sessions)
         {
             InitializeComponent();
             httpClient = new HttpClient

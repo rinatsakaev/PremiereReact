@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using CommonModels;
-using CommonModels.Models;
 using PremiereReact.Models;
 
-namespace PremiereServer
+namespace PremiereReact
 {
     public class AppDbContext : DbContext
     {

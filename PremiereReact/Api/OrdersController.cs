@@ -1,13 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using System.Threading.Tasks;
 using CommonModels;
-using CommonModels.Models;
 using Microsoft.EntityFrameworkCore;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace PremiereServer.Api
+namespace PremiereReact.Api
 {
     [Route("api/[controller]")]
     public class OrdersController : Controller
