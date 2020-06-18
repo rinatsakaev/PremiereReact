@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace PremiereReact
 {
@@ -21,7 +22,13 @@ namespace PremiereReact
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddDbContext<AppDbContext>();
+            services.AddDbContext<AppDbContext>(
+                opts =>
+                opts.UseNpgsql(
+                    Configuration.GetSection("Database")["ConnectionString"],
+                    x => x.SetPostgresVersion(new Version(9, 6))
+                    )
+                );
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
