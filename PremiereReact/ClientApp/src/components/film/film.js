@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './index.css';
 import Session from '../session/session';
 
-export default function Film({onAdd, filmId, name}) {
+export default function Film({filmId, name}) {
     const [sessionDate, setSessionDate] = useState(undefined);
     const [existingSessions, setExistingSessions] = useState([]);
     const createSession = () => {

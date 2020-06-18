@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace CommonModels.Models
+namespace CommonModels
 {
     public class Film
     {

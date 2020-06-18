@@ -12,7 +12,7 @@
     <Grid>
         <ListView x:Name="SessionsView">
             <ListView.ItemTemplate>
-                <DataTemplate DataType="models:Session">
+                <DataTemplate DataType="commonModels:Session">
                     <StackPanel>
                         <TextBlock Text="{Binding StartTime}"/>
                         <xctk:IntegerUpDown Name="Quantity" Minimum="0"/>
